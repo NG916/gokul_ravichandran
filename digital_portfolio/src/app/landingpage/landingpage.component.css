@@ -1,0 +1,166 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    /* Base font size for the body */
+}
+
+.landing-page {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    position: relative;
+}
+
+.left-half {
+    flex: 1;
+    background-image: url('/assets/landingpageleftbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.text-container {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    text-align: left;
+    z-index: 2;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: bold;
+}
+
+.text-container h3 {
+    font-size: 2.5em;
+    /* Heading font size */
+}
+
+.text-container p {
+    font-size: 1em;
+    /* Paragraph font size */
+}
+
+.right-half {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('/assets/landingpagerightbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 90%;
+    height: 80%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    /* Ensure it's above the background image */
+}
+
+.grid-item {
+    background-color: rgba(211, 211, 211, 0.7);
+    border-radius: 15px;
+    /* Add curvature to the edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 3 / 2;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    /* Font size for items in the grid */
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    /* Ensure the images follow the same curvature as the container */
+    position: absolute;
+    z-index: -1;
+}
+
+/* Center alignment */
+.align-center {
+    object-position: center;
+}
+
+/* Top alignment */
+.align-top {
+    object-position: top;
+}
+
+/* Bottom alignment */
+.align-bottom {
+    object-position: bottom;
+}
+
+/* Left alignment */
+.align-left {
+    object-position: left;
+}
+
+/* Right alignment */
+.align-right {
+    object-position: right;
+}
+
+/* Custom alignment example (adjust as needed) */
+.align-custom {
+    object-position: 60% 10%;
+}
+
+.vertical-rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* Ensure it's above the grid items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    /* Add curvature to the vertical rectangle edges */
+}
+
+.master-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    /* Ensure the image follows the same curvature as the container */
+}
